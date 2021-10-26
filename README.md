@@ -10,8 +10,6 @@
   <a href="https://ru.reactjs.org/"><img src="readme/icon-react.svg" alt="React"></a>
     <img src="readme/icon-whitespace-5px.svg"/>
   <a href="https://webpack.js.org/"><img src="readme/icon-webpack.svg" alt="WebPack"></a>
-    <img src="readme/icon-whitespace-5px.svg"/>
-  <a href="https://styled-components.com/"><img src="readme/icon-styled-components.svg" alt="Styled-components"></a>
 </p>
 
 ## Задание
