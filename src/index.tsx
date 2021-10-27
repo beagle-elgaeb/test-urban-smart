@@ -1,39 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { BrowserRouter } from 'react-router-dom';
 import App from "./components/App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
-const defaultState = {
-  login: "",
-  password: "",
-  isLogin: false,
-};
-
-function reducer(
-  state = defaultState,
-  action: { type: string; data: { login: string; password: string; isLogin: boolean } }
-): { login: string; password: string; isLogin: boolean } {
-  switch (action.type) {
-    case "INPUT":
-      return { ...state };
-    case "LOGIN":
-      return { ...state, isLogin: true };
-
-    default:
-      return state;
-  }
-}
-
-const store = createStore(reducer);
+import store from "./redux/redux"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
