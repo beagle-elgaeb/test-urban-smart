@@ -1,4 +1,4 @@
-export interface RedaxState {
+export interface ReduxState {
   login: string;
   password: string;
   isLogin: boolean;
@@ -13,8 +13,5 @@ export type Action =
       };
     }
   | {
-      type: "AUTH";
-      data: {
-        isLogin: boolean;
-      };
+      type: "AUTH"
     };

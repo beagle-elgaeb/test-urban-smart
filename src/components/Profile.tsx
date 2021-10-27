@@ -1,12 +1,9 @@
 import { useSelector } from 'react-redux';
-import { RedaxState } from '../redux/types';
+import { ReduxState } from '../redux/types';
 
 function Profile() {
-  const login = useSelector((state: RedaxState) => state.login);
-  const isLogin = useSelector((state: RedaxState) => state.isLogin);
-
-  console.log(login, isLogin);
-
+  const login = useSelector((state: ReduxState) => state.login);
+  const isLogin = useSelector((state: ReduxState) => state.isLogin);
 
   return (
     <div>

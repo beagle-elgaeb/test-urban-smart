@@ -1,12 +1,12 @@
 import defaultState from "./defaultState";
-import { RedaxState, Action } from "./types";
+import { ReduxState, Action } from "./types";
 
-function reducer(state = defaultState, action: Action): RedaxState {
+function reducer(state = defaultState, action: Action): ReduxState {
   switch (action.type) {
     case "INPUT":
       return { ...state, [action.data.name]: action.data.value };
     case "AUTH":
-      return { ...state, isLogin: action.data.isLogin };
+      return { ...state, isLogin: true };
 
     default:
       return state;
